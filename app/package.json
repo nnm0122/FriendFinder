@@ -1,0 +1,11 @@
+{
+  "name": "freindfinder",
+  "version": "1.0.0",
+  "description": "app that provides the best matched friend based on compatibility",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nm",
+  "license": "ISC"
+}
