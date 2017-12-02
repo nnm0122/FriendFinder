@@ -1,21 +1,6 @@
-// Dependencies
-// =============================================================
-var express = require("express");
-var bodyParser = require("body-parser");
-var path = require("path");
-
-// Sets up the Express App
-// =============================================================
-var app = express();
-var PORT = 3000;
-
-// Sets up the Express app to handle data parsing
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
 //Friends data
 // =============================================================
-var friends = [
+var friendList = [
 {
 	"name": "Will Smith",
 	"photo": "https://www.famousbirthdays.com/headshots/will-smith-1.jpg",
@@ -114,6 +99,6 @@ var friends = [
 	5
 	]
 }
-]
+];
 
 module.exports = friendList;
