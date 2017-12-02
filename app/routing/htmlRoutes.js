@@ -7,16 +7,24 @@ var path = require("path");
 module.exports = function(app) {
 //  This is the HTML GET Requests
 
+app.get("/", function(req, res) {
 
- // Code below handles when users "visit" a page.
- // user is shown an HTML page of content
-app.get("/survey", function(req, res) {
-	res.sendFile(path.join(__dirname, "../public/survey.html"));
-});
+		// homepage served
+		res.sendFile(path.join(__dirname, "../public/home.html"));
 
-// USE- route to home page
-app.use(function (req, res) {
-	res.sendFile(path.join(__dirname + "../public/home.html"));
-});
+	});
+
+	app.get("/survey", function(req, res) {
+
+		// survey page served
+		res.sendFile(path.join(__dirname, "../public/survey.html"));
+	})
+
+
+	app.get('/*', function(req, res) {
+
+		// if no matching route then default to home
+		res.sendFile(path.join(__dirname, "../public/home.html"));
+	})
 
 };
